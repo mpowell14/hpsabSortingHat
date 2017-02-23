@@ -1,0 +1,293 @@
+<head>
+    <title>sorting</title>
+</head>
+
+<template name="layout">
+    <div class="layout">
+        {{> Template.dynamic template=main}}
+    </div>
+</template>
+
+<template name="results">
+    <div class="top-section">
+        {{> Template.dynamic template=results}}
+    </div>
+</template>
+
+<template name="hello">
+    <h1>Welcome to the HPSAB Sorting Hat Quiz!</h1>
+    <div class="crest">
+        <img src="Hogwarts.png" height="241px" width="208px">
+    </div>
+    <button id="start" class="btn">Start Quiz</button>
+</template>
+
+<template name="gryffindor">
+    <div class="gryffindor">
+        <h1>Gryffindor!</h1>
+        <img src="Gryffindor.png">
+        <br />
+        <button id="startOver" class="btn">Start Quiz Over</button>
+    </div>
+</template>
+
+<template name="ravenclaw" class="ravenclaw">
+    <div class="ravenclaw">
+        <h1>Ravenclaw!</h1>
+        <img src="Ravenclaw.png" height="241px" width="208px">
+        <br />
+        <button id="startOver" class="btn">Start Quiz Over</button>
+    </div>
+</template>
+
+<template name="hufflepuff" class="hufflepuff">
+    <div class="hufflepuff">
+        <h1>Hufflepuff!</h1>
+        <img src="Hufflepuff.png" height="241px" width="208px">
+        <br />
+        <button id="startOver" class="btn">Start Quiz Over</button>
+    </div>
+</template>
+
+<template name="slytherin" class="slytherin">
+    <div class="slytherin">
+        <h1>Slytherin!</h1>
+        <img src="Slytherin.png">
+        <br />
+        <button id="startOver" class="btn">Start Quiz Over</button>
+    </div>
+</template>
+
+<template name="questionOne">
+    <h3>Which of these is your favorite Gryffindor?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="slytherin1" name="optradio">Harry Potter</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw1" name="optradio">Hermione Granger</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff1" name="optradio">Ron Weasley</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor1" name="optradio">None of the above</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionTwo">
+    <h3>Which of these is your favorite Hufflepuff?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw2" name="optradio">Newt Scamander</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor2" name="optradio">Nymphadora Tonks</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff2" name="optradio">Cedric Diggory</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="slytherin2" name="optradio">None of the above</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionThree">
+    <h3>Which of these is your favorite Ravenclaw?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="gryffindor3" name="optradio">Luna Lovegood</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="slytherin3" name="optradio">Gilderoy Lockhart</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff3" name="optradio">Garrick Ollivander</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw3" name="optradio">None of the above</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionFour">
+    <h3>Which of these is your favorite Slytherin?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="slytherin4" name="optradio">Draco Malfoy</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor4" name="optradio">Severus Snape</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw4" name="optradio">Horace Slughorn</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff4" name="optradio">None of the above</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionFive">
+    <h3>Which of these is most important to you?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="slytherin5" name="optradio">Power</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff5" name="optradio">Love</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor5" name="optradio">Fame</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw5" name="optradio">Knowledge</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionSix">
+    <h3>Which of these quotes is your favorite?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="gryffindor6" name="optradio">"It does not do to dwell on dreams and forget to live."</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw6" name="optradio">"Of course it is happening inside your head, Harry, but why on Earth should that mean that it is not real?"</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="slytherin6" name="optradio">"I am what I am, an’ I’m not ashamed. ‘Never be ashamed,’ my ol’ dad used ter say, ‘there’s some who’ll hold it against you, but they’re not worth botherin’ with.”</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff6" name="optradio">"There are some things you can't share without ending up liking each other, and knocking out a twelve-foot mountain troll is one of them."</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionSeven">
+    <h3>How do you make decisions?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw7" name="optradio">Follow your moral compass</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor7" name="optradio">Trust your gut</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff7" name="optradio">Analyze how your decision will impact your community</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="slytherin7" name="optradio">Analyze how your decision will impact your closest friends</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionEight">
+    <h3>How do you approach problems?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="gryffindor8" name="optradio">Act quickly</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="slytherin8" name="optradio">Improvise</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw8" name="optradio">Strategize</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff8" name="optradio">Develop your own method and follow it</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionNine">
+    <h3>What do you think is the worst way to spend a day?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff9" name="optradio">Alone in your room</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor9" name="optradio">Not doing anything</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw9" name="optradio">Not doing anything new</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="slytherin9" name="optradio">Not doing anything for you</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionTen">
+    <h3>If you were suddenly rich, what would you do?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw10" name="optradio">Go to grad school</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff10" name="optradio">Donate to charity</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor10" name="optradio">Travel the world doing cool things</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="slytherin10" name="optradio">Invest</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionEleven">
+    <h3>Which of these would you rather be?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" name="optradio" id="slytherin11">Trusted</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff11" name="optradio">Liked</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor11" name="optradio">Praised</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw11" name="optradio">Envied</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionTwelve">
+    <h3>Amortentia is a potion that smells of what attracts a person.  If it lured you, what would it smell of?</h3>
+    <div class="form-group">
+        <div class="radio">
+            <label><input type="radio" id="slytherin12" name="optradio">A crackling log fire</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw12" name="optradio">New parchment</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor12" name="optradio">The sea</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff12" name="optradio">Home</label>
+        </div>
+    </div>
+</template>
+
+<template name="questionThirteen">
+    <h3>A muggle confronts you and says that they are sure that you are a witch or wizard.  Do you:</h3>
+    <div class="form-group" id="end">
+        <div class="radio">
+            <label><input type="radio" id="ravenclaw13" name="optradio">Ask what makes them think so</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="gryffindor13" name="optradio">Agree and walk away, leaving them wondering if you were telling the truth</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="hufflepuff13" name="optradio">Agree and ask them if they want a free sample of a jinx</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="slytherin13" name="optradio">Ask if they're feeling alright and offer to call a doctor</label>
+        </div>
+    </div>
+</template>

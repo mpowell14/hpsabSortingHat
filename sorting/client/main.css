@@ -1,0 +1,104 @@
+/* CSS declarations go here */
+body {
+    text-align: center;
+    background-color: #f3f3f3;
+}
+.layout {
+    padding: 10%;
+}
+
+.ravenclaw {
+    color: #cdb081;
+    background-color: #0e1a40;
+    padding: 10%;
+    width: 100%;
+    margin: 0;
+    height:100vh;
+}
+
+.slytherin {
+    color: #aaaaaa;
+    background-color: #2a623d;
+    padding: 10%;
+    width: 100%;
+    margin: 0;
+    height:100vh;
+}
+
+.gryffindor {
+    color: #eeba30;
+    background-color: #740001;
+    padding: 10%;
+    width: 100%;
+    margin: 0;
+    height:100vh;
+}
+
+.hufflepuff {
+    color: #ecb939;
+    background-color: #000000;
+    padding: 10%;
+    width: 100%;
+    margin: 0;
+    height:100vh;
+}
+
+#start {
+    padding: 20px 40px;
+}
+
+#startOver {
+    margin-top: 40px;
+    padding: 20px 40px;
+}
+
+label {
+    padding: 20px 20px;
+    width: 50%;
+}
+
+.radio label {
+    transition: background-color 0.2s ease;
+}
+
+.radio label:hover {
+    background-color: #d5bc30;
+    color: #ffffff;
+}
+
+input {
+    visibility:hidden;
+    text-align: center;
+}
+
+h3 {
+    padding-bottom: 20px;
+}
+
+.top-section{
+  height:100vh;
+}
+
+html, body{
+  height:100%;
+}
+
+h1 {
+    margin-bottom: 75px;
+}
+
+.crest {
+    margin-bottom: 40px;
+    margin-top: -20px;
+}
+
+.btn {
+    background-color: #ccb327;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ecb939;
+    color: white;
+}
